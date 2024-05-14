@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PERSONA GUMMY</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+    
+    html {scroll-behavior: smooth; line-height: 1.5;}
+    
+    body, ul {cursor: crosshair;
+      margin: 0;
+      padding: 0;
+    }
+
+    section{padding-top: 100px; padding-bottom: 100px;}
+    h1{font-family: 'Jomhuria', serif; font-size: 10rem; font-weight: 400; font-style: normal; padding-top: 120px; margin-bottom: -50px; position: relative; color: #FF2E00;}
+    h2{font-family: 'Jomhuria', serif; font-size: 11rem; font-weight: 400; font-style: normal; margin-bottom: -50px; position: relative; color: #FF2E00;}
+    h3{font-family: 'Jomhuria', serif; font-size: 11rem; font-weight: 400; font-style: normal; padding-top: 200px; margin-bottom: -50px; position: relative; color: #FF2E00;}
+    h4{position: relative; font-family: 'Pretendard'; font-weight: 600; font-size: 4rem; color: white; margin-top: -100px;}
+    h5{font-family: 'Jomhuria', serif; font-size: 7rem; font-weight: 400; font-style: normal; color: #FF2E00; margin-top: -50px;}
+    h6{font-family: 'Jomhuria', serif; font-size: 4rem; font-weight: 400; font-style: normal; color: white; padding-left: 1250px;}
+    h7{font-family: 'Jomhuria', serif; font-size: 4rem; font-weight: 400; font-style: normal; color: white; padding-left: 1200px;}
+    h8 {
+    font-family: 'Pretendard-Bold';
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: white;
+    padding-bottom: 40px;
+    margin: 0;
+    padding-top: 30px;
+    position: absolute;
+}
+    h9 {
+    font-family: 'Pretendard-Regular';
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: white;
+    padding-bottom: 40px;
+    margin: 0;
+    padding-top: 80px;
+    position: absolute;
+}
+    h10{font-family: 'Jomhuria', serif; font-size: 7rem; font-weight: 400; font-style: normal; padding-top: 200px; position: relative; color: white;}
+
+
+    p1{position: relative; margin-top: 0px; margin-bottom: 100px; font-family: 'Pretendard'; font-weight: 600; font-size: 1.5rem; color: #FF2E00;}
+    p2{font-family: 'Pretendard'; 
+        font-weight: 400; 
+        font-size: 1.4rem; 
+        color: white; padding-top: 80px;
+      }
+
+    p3{position: relative; font-family: 'Pretendard'; font-weight: 600; font-size: 2.5rem; color: white;}
+    p4{position: relative; font-family: 'Pretendard'; font-weight: 500; line-height: 1.5; font-size: 1.4rem; color: white;}
+    p5{position: relative; font-family: 'Pretendard'; font-weight: 600; font-size: 2rem; color: white;}
+    p6{display: block; width: 500px; text-align: right; padding-left: 900px; margin:auto; font-family: 'Pretendard'; font-weight: 600; font-size: 2rem; color: white;}
+    p7{display: block; width: 530px; padding-left: 880px; margin:auto; font-family: 'Pretendard'; font-weight: 500; line-height: 1.3; font-size: 1.4rem; color: white;}
+    p8{display: block; width: 800px; margin:auto; font-family: 'Pretendard'; font-weight: 500; line-height: 1.3; font-size: 1.4rem; color: white; margin-top: -160px;}
+    p9{position: relative; font-family: 'Pretendard'; font-weight: 500; line-height: 1.7; font-size: 1.8rem; color: white;}
+    p10{position: relative; font-family: 'Pretendard'; font-weight: 500; line-height: 1.5; font-size: 1rem; color: white;}
+
+    img{margin: auto; margin-top:-50px; padding-left: 200px; height: 70%;}
+
+    
+    nav {
+      background: black;
+      text-align: left;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      font-family: Pretendard;
+      font-weight: 600;
+      color: #FF2E00;
+      background: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #FF2E00; color: white;
+    }
+
+    .image-wrapper1 {
+  position: relative;
+  overflow: hidden; 
+  max-width: 100%; 
+}
+
+    .caution-image {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  animation: moveRight 13s linear infinite;
+}
+
+    @keyframes moveRight {
+  0% {
+    left: 100%; /* 초기 위치 설정 */
+  }
+  100% {
+    left: -100%; /* 원래 위치로 돌아오도록 설정 */
+  }
+}
+
+    .image-wrapper2 {
+  position: relative;
+  overflow: hidden; 
+  max-width: 100%; 
+}
+    .caution2-image{
+  position: absolute;
+  top: 50%; /* 세로 중앙 정렬 */
+  right: 0; /* 초기 위치를 오른쪽 끝으로 설정 */
+  transform: translate(0, -50%);
+  width: auto; /* 이미지 너비를 자동으로 설정하여 원본 비율 유지 */
+  animation: moveLeft2 13s linear infinite; /* 오른쪽으로 5초간 선형으로 반복하여 흘러가도록 설정 */
+}
+
+@keyframes moveLeft2 {
+  0% {
+    right: 0; /* 초기 위치 설정 */
+  }
+  100% {
+    right: -100%; /* 왼쪽으로 이동하여 흘러가도록 설정 */
+  }
+}
+
+@keyframes burning-text {
+  0% { opacity: 1; transform: translateX(50%); }
+  100% { opacity: 0; transform: translateX(-100%); }
+}
+
+.burning-text {
+  animation: burning-text 2s linear infinite;
+}
+
+    .wrap1{width: 1400px; margin: auto;}
+
+    .wrap2{width: 1400px; margin: auto; padding-top: 400px;}
+    
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0px;
+    }
+
+    .flex1 {
+      display: flex;
+      gap: 5%;
+      justify-content: right;
+    }
+
+    .flexitem{width: 70%}
+    .fleximg{height: 180px;}
+    .fleximg2{height: 500px;}
+    .img1{display: right}
+    
+    .menu {
+      list-style-type: none;
+      display: flex;
+      font-family: Pretendard;
+      font-weight: 600;
+    }
+    
+    .menu li {padding-right: 40px; padding-left: 40px;}
+    
+    .menu li:last-child {margin-right: 0;}
+    
+    .menu li a {text-decoration: none;color: white;}
+    
+    .menu li a:hover {color: #FF2E00;}
+  
+    .fixed-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: black;
+      z-index: 1000;
+    }
+    
+    .logo {
+      padding-left: 40px;
+      font-family: 'Jomhuria', serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 3rem;
+      color: #FF2E00;
+    }
+    .left-spacing0 {
+      padding-left: 20px;
+      text-align: justify;
+      max-width: 800px;
+      margin: auto; width: 40%;
+    }
+
+    .left-spacing{padding-left: 700px;}
+    .left-spacing2 {
+      padding-left: 20px;
+      text-align: justify;
+      max-width: 800px;
+      margin: auto;
+    }
+    .left-spacing3{padding-left: 900px;}
+    .left-spacing4 {
+      padding-left: 20px;
+      text-align: justify;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .left-spacing5{padding-left: 1200px;}
+    .left-spacing6{padding-left: 1100px;}
+    .left-spacing8{padding-left: 800px;}
+    .left-spacing9{padding-left: 100px;}
+
+    .right-spacing2{text-align: right;}
+    .right-spacing3{padding-right: 100px;}
+
+    .align-r{width:400px; text-align: right; padding-left: 900px;}
+
+
+    .center-spacing{padding-left: 100px;padding-right: 100px; text-align: center;}
+
+    .line-breaks{line-height: 1.6;}
+
+    .image-container {display: flex;}
+
+    .jomhuria-regular {
+      font-family: "Jomhuria", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .white{background: white;}
+
+    .custom-style{color: #FF2E00; font-family: Jomhuria, serif; font-size: 5rem; font-weight: 400; font-style: normal; line-height: 1.2;}
+    .custom-style2{color: #FF2E00; font-family: Jomhuria, serif; font-size: 3rem; font-weight: 400; font-style: normal; line-height: 1.2;}
+
+    .container {
+      width: 80%; 
+      margin: 0 auto; 
+      padding: 0 15px; 
+    }
+
+    .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+    .image-wrapper {
+        position: relative;
+        flex: 0 0 calc(33.33% - 10px); /* 33.33% 너비로 설정하고 간격을 줄이기 위해 10px 빼기 */
+        margin-bottom: 20px;
+        padding: 0 5px;
+        text-align: center;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.3s ease;
+    }
+
+    .image-text {
+        position: absolute;
+        top: 30%;
+        left: 85%;
+        transform: translate(-50%);
+        color: white;
+        padding: 10px;
+        font-size: 60px;
+        font-family: Jomhuria, serif;
+        font-style: normal;
+        opacity: 0; /* 기본적으로 텍스트는 투명하게 설정 */
+        transition: opacity 0.3s ease; /* 호버링 시 효과를 위한 트랜지션 설정 */
+    }
+
+    .image-wrapper:hover img {opacity: 0.7;}
+
+    .image-wrapper:hover .image-text {
+        opacity: 1; /* 호버링 시 텍스트가 나타나도록 투명도 설정 */
+    }
+
+    .custom-image {
+    max-width: 80%; height: auto; padding-top: 50px;
+}
+    .custom-image1 {
+    max-width: 70%; height: auto; padding-top: 50px;
+}
+    .custom-image2 {
+    max-width: 40%;
+    height: auto; 
+}
+    .custom-image3 {
+    max-width: 30%;
+    height: auto; 
+}
+    .custom-image4 {
+    max-width: 45%;
+    height: auto;
+    margin-top: -100px; 
+}
+    .image-wrapper:nth-child(2) .image-text {
+    left: 92%; /* 원하는 위치로 조정 */
+}
+    .image-wrapper:nth-child(5) .image-text {
+    top:28%; left: 90%; /* 원하는 위치로 조정 */
+}
+    .image-wrapper:nth-child(6) .image-text {
+    top:27%; left: 82%; /* 원하는 위치로 조정 */
+}
+    .image-text:hover {
+  cursor: pointer;
+}
+
+
+    #section {
+  background: linear-gradient(to bottom, #FF2E00, black);
+  padding: 5px 0;
+  position: relative;}
+
+    #section::before {
+  content: '';
+  position: absolute;
+  padding: 0px 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh; 
+  background: linear-gradient(to top, #FF2E00, black, transparent, rgba(0, 0, 0, 1));
+  z-index: -1;
+}
+    #imageContainer {
+      display: none;
+      justify-content: center; padding-right: 150px;
+    }
+    #imageToShow {
+      max-width: 100%;
+      max-height: 700px;
+    }
+
+  #section-with-background {
+  background-image: url('candy.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-top: 300px;
+  text-align: center;
+}
+  #ENERGY {margin-top: 200px;
+  /* 그라디언트를 적용합니다. */
+  background: linear-gradient(to top, transparent, #FFB800);
+}
+  #section-gradient1 {
+  background-image: linear-gradient(to top, transparent 50px, #FFB800 50px);
+}
+  #RESPONSIBILITY {margin-top: 200px;
+    /* 그라디언트를 적용합니다. */
+    background: linear-gradient(to top, transparent, #FF2B35);
+  }
+    #section-gradient2 {
+    background-image: linear-gradient(to top, transparent 50px, #FF2B35 50px);
+  }
+   #PEACE {margin-top: 200px;
+      /* 그라디언트를 적용합니다. */
+      background: linear-gradient(to top, transparent, #009FFF);
+    }
+  #section-gradient3 {
+    background-image: linear-gradient(to top, transparent 50px, #009FFF 50px);
+  }
+  #EMPATHY {margin-top: 200px;
+      /* 그라디언트를 적용합니다. */
+      background: linear-gradient(to top, transparent, #AF91E7);
+    }
+  #section-gradient4 {
+    background-image: linear-gradient(to top, transparent 50px, #AF91E7 50px);
+  }
+  #IMMERSION {margin-top: 200px;
+      /* 그라디언트를 적용합니다. */
+      background: linear-gradient(to top, transparent, #00EA6C);
+    }
+  #section-gradient5 {
+    background-image: linear-gradient(to top, transparent 50px, #00EA6C 50px);
+  }
+  #RESOLUTE {margin-top: 200px;
+      /* 그라디언트를 적용합니다. */
+      background: linear-gradient(to top, transparent, #FF8A00);
+    }
+  #section-gradient6 {
+    background-image: linear-gradient(to top, transparent 50px, #FF8A00 50px);
+  }
+
+
+
+
+  </style>
+  <script>
+    function toggleImage() {
+      var imageContainer = document.getElementById('imageContainer');
+      if (imageContainer.style.display === 'block') {
+        imageContainer.style.display = 'none';
+      } else {
+        imageContainer.style.display = 'block';
+      }
+    }
+  </script>
+</head>
+<body style="background-color: black;">
+  <nav class="fixed-nav">
+    <div class="wrap flex">
+      <div class="logo"> PERSONA GUMMY </div>
+      <ul class="menu">
+        <li><a href="#section"; "#aaa">ABOUT</a></li>
+        <li><a href="#bbb">GUIDE</a></li>
+        <li><a href="#ccc">PRODUCT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+        <section id="section">
+            <div class="wrap1 fleximg">
+                <h1 class="left-spacing">PERSONA</h1>
+                <p1 class="left-spacing">[ pərˈsoʊnə ] </p1><br><br><br><br><br>
+                <div class="left-spacing">
+                    <p2 class="line-breaks">그리스 어원의 ‘가면’을 나타내는 말로 ‘외적 인격’ 또는 ‘가면을 쓴 인격’<br>자아가 겉으로 드러난 의식의 영역을 통해 외부 세계와 관계를 맺을 때<br>집단 사회의 행동 규범 또는 역할을 수행하기 위해 쓰는 가면</p2>
+            </div>
+        </section>
+      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGpobWJ4NWNyem53cmZoNXpnaTh1cGtycm5pN2I3YWxndzNjejg2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ie3U6gTmbY4KTQtOPJ/giphy.gif">
+
+      <section id="aaa">
+        <div class="wrap2 fleximg">
+          <p3 class="right-spacing burning-text">바뀌려고 해도 마음대로 되지 않는 현실<br><span class="custom-style">GUMMY</span> 한 입에<br>다른 자아를 가지게 된다면?<br><br><br>상황마다 모두 다른 자아가 필요한 당신을 위해</p3>
+       </div>
+
+    </section>
+  <img class="left-spacing3">
+  <img src="jelly4.png" style="margin-top: -320px;">
+    <section id="section-with-background">
+            <div class="wrap1 fleximg center-spacing" style="padding-bottom: 350px";>
+                <h2>PERSONA GUMMY</h2><br><br>
+                <p4>현대사회는 우리에게 극복을 요구하지만 우리는 그 외에도 신경 쓸 일이 너무나도 많습니다.<br> <span class="custom-style2">PERSONA GUMMY</span>  는 바쁜 현대인들의 시간을 아껴주고, 고민하는 시간을 줄여드리고자 하는 취지에서 시작하였습니다.<br>우리는 현대인들의 건강한 정신생활과 평화로운 인간관계를 지향합니다.</p4>
+              </div>
+    </section>
+
+    <section id="bbb">
+            <div class="wrap1 fleximg">
+                <h3 class="right-spacing4">Step 1.</h3>
+                <p5 class="right-spacing">PERSONA GUMMY를 고르기 전에<br>
+성분표를 확인해주세요.</p5>
+                <p4 class="right-spacing"><br><br><br>다른 자아가 필요한 순간을 떠올리며 성분표를 읽어주세요.<br>* 알러지가 있는 경우 성분표를 꼼꼼히 확인해주세요.</p4>
+              </div>
+        <img class="left-spacing5">
+        <img src="nutrition.png" style="padding-left: 1000px;">
+      <div class="center-spacing" style="padding-top:150px; text-align: center;">
+        <button onclick="toggleImage()">성분표 확인하기</button>
+        <div id="imageContainer" style="display: none;">
+          <img id="imageToShow" src="allnutrition.jpg" alt="성분표 확인하기">
+          <button onclick="toggleImage()">X</button>
+        </div>
+      </div>
+      <div class="wrap1 fleximg">
+        <h3 class="left-spacing6">Step 2.</h3>
+        <p6>나에게 필요한 PERSONA GUMMY를<br>둘러보고 선택해보세요.</p6>
+        <p7><br><br><br>클릭해서 PERSONA GUMMY의 상세정보를 확인해보세요!</p7>
+      </div>
+      <div class="gallery wrap1" style="padding-top: 600px; padding-right: 250px;">
+    <div class="image-wrapper">
+        <img id="jelly4-image" src="jelly4.png" alt="jelly4" class="custom-image">
+        <div class="image-text" data-target="ENERGY">ENERGY</div>
+    </div>
+    <div class="image-wrapper">
+        <img src="jelly5.png" alt="jelly5">
+        <div class="image-text" data-target="RESPONSIBILITY">RESPONSIBILITY</div>
+    </div>
+    <div class="image-wrapper">
+        <img src="jelly3.png" alt="jelly3" class="custom-image">
+        <div class="image-text" data-target="PEACE">PEACE</div>
+    </div>
+    <div class="image-wrapper">
+        <img src="jelly1.png" alt="jelly1" style="margin-left: -40px;">
+        <div class="image-text" data-target="EMPATHY">EMPATHY</div>
+    </div>
+    <div class="image-wrapper">
+        <img src="jelly6.png" alt="jelly6" class="custom-image1" style="margin-left: 50px;">
+        <div class="image-text" data-target="IMMERSION">IMMERSION</div>
+    </div>
+    <div class="image-wrapper">
+        <img src="jelly2.png" alt="jelly2" class="custom-image1" style="margin-left: 20px;">
+        <div class="image-text" data-target="RESOLUTE">RESOLUTE</div>
+    </div>
+</div>
+  <div class="wrap1 fleximg" style="padding-bottom:400px">
+    <h3 class="right-spacing4">Step 3.</h3>
+    <p5 class="right-spacing">PERSONA GUMMY를 섭취하기 전 주의해주세요!</p5>
+</div>
+<div class="fleximg image-wrapper1 img">
+  <img src="caution.png" alt="caution" class="caution-image">
+  </div>
+  <div class="wrap1">
+    <h5 class="center-spacing">CAUTION</h5>
+    <p8 class="center-spacing" style="padding-bottom: 150px">* 1회에 최대 2개까지 섭취 가능합니다.<br><br>
+* 권장량을 초과하여 섭취할 경우 심각한 부작용이 나타날 수 있습니다.<br><br>
+* 하루에 각각 다른 종류의 페르소나 구미를 섭취할 시 부작용이 발생할 수 있습니다.<br><br>
+* 기억력이 감소하고 극심한 무기력과 공황장애가 발생할 위험이 있습니다.</p8>
+</div>
+<div class="fleximg image-wrapper2 img">
+  <img src="caution2.png" alt="caution2" class="caution2-image">
+</div>
+
+  </div>
+
+<section id="ccc">
+</section>
+  <section id="ENERGY">
+  <div class="wrap1 fleximg">
+    <h4 class="right-spacing" style="padding-top:150px">새학기, 다가가기 망설이고 있다면?<br>에너지를 원하는 당신에게!</h4>
+    <p9 class="right-spacing">불씨 추출물을 통해 열정을 갖게되며,<br>확성기의 붉은 기운을 받아 강렬한 인상을 남길 수 있습니다.</p9>
+  </div>
+  </section>
+  <img class="left-spacing3">
+  <img src="jelly4.png" style="padding-top: 250px;">
+  <img src="energynut.png" class="custom-image2 right-spacing" style="margin-top:-380px; margin-left: -50px;">
+  <img src="grady.png" class="custom-image3" style="padding-left: 1100px; margin-top: -150px;">
+  <h6 style="margin-top:-80px;">ENERGY GUMMY</h6>
+</section>
+  <section id="RESPONSIBILITY">
+  <div class="wrap1 fleximg">
+    <h4 class="right-spacing" style="padding-top:150px">리드해보고 싶다면?
+    <br>사람들을 잘 이끌고 싶은 당신에게!</h4>
+    <p9 class="right-spacing">목소리가 커지고 하는 말마다 사람들이 경청합니다.
+    <br>책임감이 강해져 모든 일을 대담하게 진행시킬 수 있습니다.</p9>
+  </div>
+  </section>
+  <img class="left-spacing3">
+  <img src="jelly5.png" style="padding-top: 120px; padding-left: 935px; margin-bottom: -100px;">
+  <img src="resnut.png" class="custom-image4 right-spacing" style="margin-left: -50px; margin-top: -400px;">
+  <img src="gradr.png" class="custom-image3" style="padding-left: 1100px; margin-top:-200px;">
+  <h6 style="margin-top: -85px; margin-left:-70px;">RESPONSIBILITY GUMMY</h6>
+</section>
+  <section id="PEACE">
+  <div class="wrap1 fleximg">
+    <h4 class="right-spacing" style="padding-top:150px">감정 기복이 심하다면?<br>평정심을 되찾고 싶은 당신에게!</h4>
+    <p9 class="right-spacing">마시멜로우 추출물 30g과 호수 추출물 60ml가 함유되어<br>마음 속 고요함을 가져다 줍니다.</p9>
+  </div>
+  </section>
+  <img class="left-spacing3">
+  <img src="jelly3.png" style="padding-top: 250px; padding-left: 1080px;">
+  <img src="peacenut.png" class="custom-image2 right-spacing" style="margin-top:-380px; margin-left: -50px;">
+  <img src="gradb.png" class="custom-image3" style="padding-left: 1100px; margin-top: -150px;">
+  <h6 style="margin-top:-80px;">PEACE GUMMY</h6>
+</section>
+<section id="EMPATHY">
+  <div class="wrap1 fleximg">
+    <h4 class="right-spacing" style="padding-top:150px">서로의 입장이 되어 생각해보고 싶다면?<br>공감하고 싶은 당신에게!</h4>
+    <p9 class="right-spacing">공감능력이 올라가며 생각이 말랑말랑해집니다.<br>하품과 졸음을 유발할 가능성이 있습니다.</p9>
+  </div>
+  </section>
+  <img class="left-spacing3">
+  <img src="jelly1.png" style="padding-top: 250px; padding-left: 1000px; margin-bottom: -30px;">
+  <img src="empathynut.png" class="custom-image2 right-spacing" style="margin-top:-800px; margin-left: -50px;">
+  <img src="gradp.png" class="custom-image3" style="padding-left: 1100px; margin-top: -400px;">
+  <h6 style="margin-top:-85px; margin-left:-30px;">EMPATHY GUMMY</h6>
+</section>
+<section id="IMMERSION">
+  <div class="wrap1 fleximg">
+    <h4 class="right-spacing" style="padding-top:150px">몰두하고 싶은데 집중력이 떨어진다면?<br>중요한 순간 몰입하고 싶은 당신에게!</h4>
+    <p9 class="right-spacing">카메라처럼 캡쳐한 듯 상황을 기억해내며,<br>집중력이 활활 타오릅니다.</p9>
+  </div>
+  </section>
+  <img class="left-spacing3">
+  <img src="jelly6.png" style="padding-top: 350px;">
+  <img src="imnut.png" class="custom-image2 right-spacing" style="margin-top:-380px; margin-left: -50px;">
+  <img src="gradg.png" class="custom-image3" style="padding-left: 1100px; margin-top: -150px;">
+  <h6 style="margin-top:-80px; margin-left:-30px;">IMMERSION GUMMY</h6>
+</section>
+<section id="RESOLUTE">
+  <div class="wrap1 fleximg">
+    <h4 class="right-spacing" style="padding-top:150px">거절을 잘 하고 싶다면?<br>부당한 일에 맞서고 싶은 당신에게!</h4>
+    <p9 class="right-spacing">부당한 요구시 단호하게 대처할 수 있으며,<br>비타민이 낯짝을 두껍게 만들어줍니다.</p9>
+  </div>
+  </section>
+  <img class="left-spacing3">
+  <img src="jelly2.png" style="padding-top: 350px;">
+  <img src="resonut.png" class="custom-image2 right-spacing" style="margin-top:-380px; margin-left: -50px;">
+  <img src="grado.png" class="custom-image3" style="padding-left: 1100px; margin-top: -150px;">
+  <h6 style="margin-top:-80px; margin-left:-30px;">RESOLUTE GUMMY</h6>
+</section>
+ <footer style="display: flex; justify-content: space-between; font-family: Pretendard; font-weight:600; font-size:1rem; color: white; background-color: #FF2E00; padding-top: 70px; padding-bottom: 70px;">
+  <div class="left-spacing9">PERSONA GUMMY</div>
+  <div class="center-spacing">Privacy Policy Terms of Use</div>
+  <div class="right-spacing3">&copy;2024 YeeunPark All rights reserved</div>
+</footer>
+</div>
+</section>
+                
+
+<script>
+    document.querySelectorAll('.image-text').forEach(item => {
+      item.addEventListener('click', event => {
+        const targetId = event.target.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+  </script>
+
+
+
+</body>
+</html>
